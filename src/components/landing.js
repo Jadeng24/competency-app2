@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './landing.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 class Landing extends Component {
     constructor() {
         super();
@@ -41,6 +42,11 @@ class Landing extends Component {
         })
         return (
             <div className='Landing'>
+                <div>
+                    <Link to='/hello'> <h2>Hello</h2> </Link>
+                    <Link to='/'> <h2>Landing </h2></Link>
+                    <Link to='/home'> <h2>Home </h2></Link>
+                </div>
                 animals{animals}
             </div>
         )
