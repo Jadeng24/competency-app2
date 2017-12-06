@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/home.js';
-import Landing from './components/landing.js';
+import Landing from './components/Landing/landing.js';
 import { Link } from 'react-router-dom';
+import Extras from './components/Landing/Extras/Extras.js';
 class App extends Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class App extends Component {
           <Switch>
             <Route component={Landing} exact path='/' />
             <Route component={Home} path='/home' />
+            <Route component={Extras} path='/extras' />
             <Route render={() => <div><Link to='/hello'> <h2>Hello</h2> </Link>
               <Link to='/'> <h2>Landing </h2></Link>
               <Link to='/home'> <h2>Home </h2></Link>

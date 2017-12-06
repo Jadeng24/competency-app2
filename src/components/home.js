@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './home.css';
 import { Link } from 'react-router-dom';
  
-export default function Home() {
+export default function Home(props) {
         return (
             <div>
                 
@@ -11,7 +11,7 @@ export default function Home() {
                     <Link to='/'> <h2>Landing </h2></Link>
                     <Link to='/home'> <h2>Home </h2></Link>
                 </div>
-
+                
                 <h1>Home</h1>
                 <p>hello there im jaden</p>
             </div>

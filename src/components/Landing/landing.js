@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './landing.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Extras from './Extras/Extras.js';
 class Landing extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
-            animals: []
+            animals: [],
+            name: 'jaden'
         }
         this.deleteItem = this.deleteItem.bind(this);
     }
@@ -48,6 +50,7 @@ class Landing extends Component {
                     <Link to='/home'> <h2>Home </h2></Link>
                 </div>
                 animals{animals}
+                <Extras myName={this.state.name}/>
             </div>
         )
     }
